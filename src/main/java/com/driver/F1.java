@@ -3,10 +3,8 @@ package com.driver;
 public class F1 extends Car {
 
     public F1(String name, boolean isManual) {
-        super(name,isManual);
-        //Use arbitrary values for parameters which are not mentioned
-        this.setName(name);
-        this.setManual(isManual);
+        super(name,4,4,5,isManual,"red",6);
+        //Use arbitrary values for parameters which are not mentione
     }
 
     public void accelerate(int rate){
@@ -32,33 +30,28 @@ public class F1 extends Car {
             this.setGears(1);
 
         }
-        if(newSpeed >=51 && newSpeed<=1000) {
+        else if(newSpeed >=51 && newSpeed<=1000) {
             //Stop the car, set gear as 1
             this.setGears(2);
 
-        }if(newSpeed >=101 && newSpeed<=150) {
+        }else if(newSpeed >=101 && newSpeed<=150) {
             //Stop the car, set gear as 1
             this.setGears(3);
 
-        }if(newSpeed >=151 && newSpeed<=2000) {
+        }else if(newSpeed >=151 && newSpeed<=2000) {
             //Stop the car, set gear as 1
             this.setGears(4);
 
-        }if(newSpeed >=201 && newSpeed<=250) {
+        }else if(newSpeed >=201 && newSpeed<=250) {
             //Stop the car, set gear as 1
             this.setGears(5);
 
         }
-        if(newSpeed >=250) {
+        else if(newSpeed >=250) {
             //Stop the car, set gear as 1
             this.setGears(6);
 
         }
-
-
-
-
-
         if(newSpeed > 0) {
             changeSpeed(newSpeed, getCurrentDirection());
         }
